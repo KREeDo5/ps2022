@@ -1,0 +1,15 @@
+PROGRAM LastChar(INPUT, OUTPUT);
+VAR
+  W1: CHAR;
+BEGIN
+  IF NOT EOLN(INPUT)
+  THEN
+    BEGIN
+      WHILE NOT EOLN(INPUT)
+      DO
+        READ(W1);
+      WRITELN(W1)
+    END
+  ELSE
+    WRITELN
+END.
