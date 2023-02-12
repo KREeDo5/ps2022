@@ -38,13 +38,11 @@ BEGIN {Lexico}
     END; {WHILE}
   IF Result = '0'
   THEN
-    IF (NOT(EOLN(F1))) AND (EOLN(F2))
+    IF (NOT EOLN(F1)) AND (EOLN(F2))
     THEN
       Result := '2'
     ELSE
-      IF (EOLN(F1)) AND (NOT(EOLN(F2)))
-      THEN
-        Result := '1'
+      Result := '1'
 END; {Lexico}
 BEGIN {FixLexico}
   CopyFile(INPUT, F1);
